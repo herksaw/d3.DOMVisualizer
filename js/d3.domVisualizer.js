@@ -246,7 +246,8 @@ define(['../bower_components/d3/d3', 'delta/main'], function (d3, DeltaJS) {
 
                 break;
             case Node.TEXT_NODE:
-                d3Node.value = "#text";
+                // d3Node.value = "#text";
+                d3Node.value = domNode.textContent;
                 d3Node.type = domNode.nodeValue.match(/^\s+$/) ? "text indent" : "text";
 
                 break;
